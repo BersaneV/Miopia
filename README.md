@@ -1,0 +1,55 @@
+# Miopia — A última luz da mata
+
+Lume é um vaga-lume míope numa floresta em seca. De perto, ele enxerga o galho em que pisa. Para descobrir o que o espera do outro lado, pode lançar a própria luz. A mesma fagulha que revela um pouso também atrai predadores. Esse é o ponto de partida deste metroidvania 2D feito em Python e Pygame CE.
+
+![Lume e Véspera no Bosque. Uma fagulha ilumina o poleiro do morcego no próximo galho.](docs/midia/bosque-poleiro.png)
+
+[Assistir à abertura jogável até o primeiro morcego](docs/midia/bosque-em-jogo.mp4) · [Ver os 13 encontros em movimento](docs/midia/playtest-dos-13-encontros.mp4) · [Abrir o guia para continuar o projeto](docs/equipe/GUIA_DE_CONTINUIDADE.md)
+
+## Jogar
+
+Instale Python 3.10 a 3.14 e baixe ou clone este repositório. Na pasta do jogo, abra **Jogar Miopia.command** no macOS, **rodar.bat** no Windows ou execute **./rodar.sh** no Linux. A primeira abertura pode usar a internet para instalar o Pygame CE. Se preferir usar o terminal, estes comandos funcionam no macOS e no Linux.
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m src.main
+```
+
+No Windows, use `py -3.12 -m venv .venv` com o Python 3.12 e substitua `.venv/bin/python` por `.venv\Scripts\python.exe`. Escolha **História** para começar no Bosque ou **Campo de testes** para entrar diretamente num encontro. O jogo salva o progresso localmente em SQLite.
+
+## Primeiros comandos
+
+| Ação | Teclado padrão |
+|---|---|
+| Andar | A / D ou setas |
+| Pular, bater as asas no ar e planar na queda | Espaço, segundo toque e manter pressionado |
+| Abaixar ou atravessar um apoio que permite descida | S ou S + Espaço |
+| Deslizar no chão enquanto anda | A / D + Shift |
+| Corte rápido e golpe pesado | J e L |
+| Clarear os arredores | K |
+| Lançar uma fagulha na direção do olhar | G |
+| Conversar, ler ou usar um mecanismo | E |
+| Abrir o mapa e o diário | M ou Tab |
+
+Ajustes permite remapear os comandos, ampliar o texto e suavizar clarões. No galho de Véspera, observe o lampejo da vigia e vire Lume para o pouso. O clarão revela o que está perto. A fagulha deixa luz no lugar onde cai.
+
+## Continuar o desenvolvimento
+
+A campanha atravessa o Bosque das Samambaias, o Córrego Fundo, o Taquaral e a Gruta da Figueira. O guia reúne as mudanças desde a S40, as fontes da arte, as bibliotecas, os playtests e o próximo trecho sugerido para a equipe.
+
+- [Guia de continuidade e roteiro de playtest](docs/equipe/GUIA_DE_CONTINUIDADE.md)
+- [Bibliotecas, editores e instalação](docs/equipe/BIBLIOTECAS.md)
+- [Folhas de produção dos inimigos](docs/arte/fontes) e [comparação feita na partida](docs/midia/antes-e-agora-na-partida.png)
+- [Histórico de desenvolvimento](docs/equipe/HISTORICO.md) e [plano da equipe](docs/equipe/PLANO.md)
+
+Para executar os testes no macOS ou Linux, instale as dependências de desenvolvimento e use o executor do projeto. Ele cria um perfil descartável e usa vídeo e áudio virtuais.
+
+```sh
+.venv/bin/python -m pip install -r requirements-dev.txt
+./qa.sh
+```
+
+## Créditos
+
+Projeto de Otávio Araújo Aredes Guedes, Caio Vidotte Vrech Sousa, Tiago Ribeiro Gomes, Thierry Henry Rocha da Silva, Victor Bersane Jasaitis e Iago Robert da Silva Andrade, conforme a tela de créditos do jogo. A equipe registra a origem das ilustrações geradas para esta revisão, os materiais herdados e as licenças das fontes nos arquivos de procedência. [Arte desta revisão](docs/arte/ORIGEM.md) · [Materiais da base acadêmica](docs/s00-origens.md) · [Licenças das fontes](assets/fontes)

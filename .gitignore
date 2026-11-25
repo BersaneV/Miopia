@@ -1,0 +1,20 @@
+.venv/
+.venv-incompleta-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+Thumbs.db
+distribuicao/*.tmp
+
+# Cópia local aberta pelo jogador; o arquivo .tar.gz é a cópia de distribuição.
+distribuicao/Miopia/
+colaboracao/
+
+# Evidências locais dos probes Studio.
+work/studio/
+
+# Perfis locais, bancos de progresso e medições descartáveis.
+.perfil-revisao/
+*.sqlite*
+work/entrega/
